@@ -8,7 +8,7 @@
 // https://github.com/fsharp/FSharp.Data
 // --------------------------------------------------------------------------------------
 
-module Json
+namespace Reaptor.Json
 
 open System
 open System.Text
@@ -74,7 +74,7 @@ type JsonValue =
     | JsBool of bool
     | JsNull
 
-exception private  JsonParserException of string
+exception private JsonParserException of string
 
 type private JsonParser(jsonText:string) =
 
